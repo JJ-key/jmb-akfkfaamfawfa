@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact JMB Basements for a free estimate on your basement finishing or remodeling project." />
+  <title>Contact | JMB Basements</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <span class="logo-mark">JMB</span>
+        <span class="logo-text">Basements</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="/#home">Home</a></li>
+        <li><a href="/#services">Services</a></li>
+        <li><a href="/#gallery">Gallery</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/contact.html" class="nav-cta active">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="page-header">
+    <div class="container">
+      <span class="eyebrow">Get in touch</span>
+      <h1>Let&rsquo;s talk about your basement.</h1>
+      <p>Tell us a bit about your project and we&rsquo;ll get back to you with a free estimate. Prefer to call? <a href="tel:+19474791247">(947) 479-1247</a></p>
+    </div>
+  </section>
+
+  <section class="contact-section">
+    <div class="container contact-grid">
+
+      <form class="contact-form" id="contact-form" novalidate>
+        <h2>Send us a message</h2>
+
+        <div class="form-row">
+          <label for="name">Name *</label>
+          <input type="text" id="name" name="name" required minlength="2" maxlength="100" autocomplete="name" />
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" required maxlength="200" autocomplete="email" />
+        </div>
+
+        <div class="form-row">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" maxlength="20" autocomplete="tel" />
+        </div>
+
+        <div class="form-row">
+          <label for="message">Tell us about your project *</label>
+          <textarea id="message" name="message" rows="6" required minlength="10" maxlength="2000"
+            placeholder="Approximate square footage, what you'd like included (bath, bar, etc.), and your ideal timeline."></textarea>
+        </div>
+
+        <div class="form-row honeypot" aria-hidden="true">
+          <label for="website">Leave this field blank</label>
+          <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+        </div>
+
+        <div class="form-row recaptcha-row">
+          <div id="recaptcha-container"></div>
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="submit-btn">Send Message</button>
+
+        <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+      </form>
+
+      <aside class="contact-info">
+        <div class="info-card">
+          <h3>Visit or call</h3>
+          <p><strong>JM Basements</strong><br>681 Province Town Rd<br>Auburn Hills, MI 48326</p>
+          <p><strong>Phone</strong><br><a href="tel:+19474791247">(947) 479-1247</a></p>
+          <p><strong>Email</strong><br><a href="mailto:jesusmachen@gmail.com">jesusmachen@gmail.com</a></p>
+        </div>
+
+        <div class="map-wrapper">
+          <iframe
+            title="JMB Basements location"
+            src="https://www.google.com/maps?q=681+Province+Town+Rd+Auburn+Hills+MI+48326&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </aside>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-logo">JMB Basements</div>
+        <p>Professional basement finishing &amp; remodeling in Metro Detroit.</p>
+      </div>
+      <div>
+        <h4>Quick links</h4>
+        <a href="/#services">Services</a>
+        <a href="/#gallery">Gallery</a>
+        <a href="/#about">About</a>
+        <a href="/contact.html">Contact</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="tel:+19474791247">(947) 479-1247</a>
+        <a href="mailto:jesusmachen@gmail.com">jesusmachen@gmail.com</a>
+        <span>681 Province Town Rd<br>Auburn Hills, MI 48326</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> JMB Basements. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/contact.js"></script>
+</body>
+</html>
