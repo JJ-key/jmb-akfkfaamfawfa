@@ -10,14 +10,27 @@ if (navToggle && navLinks) {
   );
 }
 
-document.querySelectorAll('.project-card .project-toggle').forEach(btn => {
+const projectCards = document.querySelectorAll('.project-card');
+projectCards.forEach(card => {
+  const btn = card.querySelector('.project-toggle');
+  const panel = card.querySelector('.project-photos');
   btn.addEventListener('click', () => {
-    const card = btn.closest('.project-card');
-    const panel = card.querySelector('.project-photos');
-    const isOpen = card.classList.toggle('is-open');
-    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    panel.hidden = !isOpen;
-    if (isOpen) {
+    const willOpen = !card.classList.contains('is-open');
+
+    projectCards.forEach(other => {
+      if (other === card) return;
+      other.classList.remove('is-open');
+      const otherBtn = other.querySelector('.project-toggle');
+      const otherPanel = other.querySelector('.project-photos');
+      otherBtn.setAttribute('aria-expanded', 'false');
+      otherPanel.hidden = true;
+    });
+
+    card.classList.toggle('is-open', willOpen);
+    btn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+    panel.hidden = !willOpen;
+
+    if (willOpen) {
       card.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   });
