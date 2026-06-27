@@ -3,62 +3,192 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>JMB Basements</title>
+  <meta name="description" content="JMB Basements - Professional basement finishing and remodeling in Auburn Hills, MI and surrounding areas." />
+  <title>JMB Basements | Basement Finishing & Remodeling | Auburn Hills, MI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
 
-  <header>
-    <h1>JMB Basements</h1>
-    <p>Professional Basement Finishing & Remodeling</p>
-  </header>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <span class="logo-mark">JMB</span>
+        <span class="logo-text">Basements</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="/contact.html" class="nav-cta">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-  <section class="gallery">
-    <h2>Our Work</h2>
-    <div class="gallery-grid" id="gallery">
-      <img src="/images/jmb_post1_01.jpg" alt="Finished basement - New Hudson" />
-      <img src="/images/jmb_post1_02.jpg" alt="Finished basement - New Hudson" />
-      <img src="/images/jmb_post1_03.jpg" alt="Finished basement - New Hudson" />
-      <img src="/images/jmb_post1_04.jpg" alt="Finished basement - New Hudson" />
-      <img src="/images/jmb_post1_05.jpg" alt="Finished basement - New Hudson" />
-      <img src="/images/jmb_post1_06.jpg" alt="Finished basement - New Hudson" />
-      <img src="/images/jmb_post1_07.jpg" alt="Finished basement - New Hudson" />
-      <img src="/images/jmb_post1_08.jpg" alt="Finished basement - New Hudson" />
-      <img src="/images/jmb_post2_01.jpg" alt="Basement project" />
-      <img src="/images/jmb_post2_02.jpg" alt="Basement project" />
-      <img src="/images/jmb_post3_01.jpg" alt="Basement project" />
-      <img src="/images/jmb_post3_02.jpg" alt="Basement project" />
-      <img src="/images/jmb_post3_03.jpg" alt="Basement project" />
-      <img src="/images/jmb_post3_04.jpg" alt="Basement project" />
-      <img src="/images/jmb_post3_05.jpg" alt="Basement project" />
-      <img src="/images/jmb_post3_06.jpg" alt="Basement project" />
-      <img src="/images/jmb_post4_01.jpg" alt="Finished basement - Canton, MI" />
-      <img src="/images/jmb_post4_02.jpg" alt="Finished basement - Canton, MI" />
-      <img src="/images/jmb_post5_01.jpg" alt="Basement project" />
-      <img src="/images/jmb_post5_02.jpg" alt="Basement project" />
-      <img src="/images/jmb_post5_03.jpg" alt="Basement project" />
-      <img src="/images/jmb_post5_04.jpg" alt="Basement project" />
-      <img src="/images/jmb_post6_01.jpg" alt="Another finished basement" />
-      <img src="/images/jmb_post6_02.jpg" alt="Another finished basement" />
-      <img src="/images/jmb_post6_03.jpg" alt="Another finished basement" />
-      <img src="/images/jmb_post6_04.jpg" alt="Another finished basement" />
-      <img src="/images/jmb_post6_05.jpg" alt="Another finished basement" />
-      <img src="/images/jmb_post6_06.jpg" alt="Another finished basement" />
-      <img src="/images/jmb_post6_07.jpg" alt="Another finished basement" />
-      <img src="/images/jmb_post6_08.jpg" alt="Another finished basement" />
-      <img src="/images/jmb_post6_09.jpg" alt="Another finished basement" />
-      <img src="/images/jmb_post6_10.jpg" alt="Another finished basement" />
-      <img src="/images/jmb_post6_11.jpg" alt="Another finished basement" />
-      <img src="/images/jmb_post6_12.jpg" alt="Another finished basement" />
-      <img src="/images/jmb_post6_13.jpg" alt="Another finished basement" />
-      <img src="/images/jmb_post6_14.jpg" alt="Another finished basement" />
-      <img src="/images/jmb_post6_15.jpg" alt="Another finished basement" />
-      <img src="/images/jmb_post6_16.jpg" alt="Another finished basement" />
-      <img src="/images/jmb_post6_17.jpg" alt="Another finished basement" />
-      <img src="/images/jmb_post6_18.jpg" alt="Another finished basement" />
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <span class="hero-eyebrow">Auburn Hills, MI &mdash; Serving Metro Detroit</span>
+      <h1>Your basement,<br><span class="accent">finished beautifully.</span></h1>
+      <p class="hero-sub">Custom basement finishing and remodeling that transforms unused square footage into your favorite room in the house.</p>
+      <div class="hero-actions">
+        <a href="/contact.html" class="btn btn-primary">Get a Free Quote</a>
+        <a href="tel:+19474791247" class="btn btn-secondary">Call (947) 479-1247</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>40+</strong><span>Project photos</span></div>
+        <div><strong>100%</strong><span>Custom builds</span></div>
+        <div><strong>Free</strong><span>Estimates</span></div>
+      </div>
+    </div>
+    <a href="#services" class="scroll-cue" aria-label="Scroll down">
+      <span></span>
+    </a>
+  </section>
+
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">What we do</span>
+        <h2>Full-service basement finishing</h2>
+        <p>From rough framing to the final paint stroke, we handle every step in-house so you have one team accountable for the whole project.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">&#9974;</div>
+          <h3>Framing &amp; Drywall</h3>
+          <p>Walls, ceilings, soffits, and bulkheads built to code with clean, square finishes.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#128268;</div>
+          <h3>Electrical &amp; Lighting</h3>
+          <p>Recessed lighting, outlets, switches, and panel work coordinated with licensed pros.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#128703;</div>
+          <h3>Bathrooms &amp; Wet Bars</h3>
+          <p>Add a full bath, half bath, or entertaining-ready wet bar to your finished space.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#127968;</div>
+          <h3>Flooring</h3>
+          <p>Luxury vinyl plank, carpet, and tile installation with moisture-aware prep.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#127912;</div>
+          <h3>Trim &amp; Paint</h3>
+          <p>Crown molding, baseboards, door casings, and a finish coat that looks factory-perfect.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#128737;</div>
+          <h3>Project Management</h3>
+          <p>One point of contact, clear timelines, and tidy job sites from demo to handover.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <script src="/js/animations.js"></script>
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Our work</span>
+        <h2>Recent finished basements</h2>
+        <p>A look at projects across Auburn Hills, New Hudson, Canton, and the surrounding areas.</p>
+      </div>
+      <div class="gallery-grid">
+        <img src="/images/jmb_post1_01.jpg" alt="Finished basement in New Hudson" loading="lazy" />
+        <img src="/images/jmb_post1_02.jpg" alt="Finished basement in New Hudson" loading="lazy" />
+        <img src="/images/jmb_post1_03.jpg" alt="Finished basement in New Hudson" loading="lazy" />
+        <img src="/images/jmb_post1_04.jpg" alt="Finished basement in New Hudson" loading="lazy" />
+        <img src="/images/jmb_post1_05.jpg" alt="Finished basement in New Hudson" loading="lazy" />
+        <img src="/images/jmb_post1_06.jpg" alt="Finished basement in New Hudson" loading="lazy" />
+        <img src="/images/jmb_post1_07.jpg" alt="Finished basement in New Hudson" loading="lazy" />
+        <img src="/images/jmb_post1_08.jpg" alt="Finished basement in New Hudson" loading="lazy" />
+        <img src="/images/jmb_post2_01.jpg" alt="Basement remodel project" loading="lazy" />
+        <img src="/images/jmb_post2_02.jpg" alt="Basement remodel project" loading="lazy" />
+        <img src="/images/jmb_post3_01.jpg" alt="Basement remodel project" loading="lazy" />
+        <img src="/images/jmb_post3_02.jpg" alt="Basement remodel project" loading="lazy" />
+        <img src="/images/jmb_post3_03.jpg" alt="Basement remodel project" loading="lazy" />
+        <img src="/images/jmb_post3_04.jpg" alt="Basement remodel project" loading="lazy" />
+        <img src="/images/jmb_post3_05.jpg" alt="Basement remodel project" loading="lazy" />
+        <img src="/images/jmb_post3_06.jpg" alt="Basement remodel project" loading="lazy" />
+        <img src="/images/jmb_post4_01.jpg" alt="Finished basement in Canton, MI" loading="lazy" />
+        <img src="/images/jmb_post4_02.jpg" alt="Finished basement in Canton, MI" loading="lazy" />
+        <img src="/images/jmb_post5_01.jpg" alt="Basement remodel project" loading="lazy" />
+        <img src="/images/jmb_post5_02.jpg" alt="Basement remodel project" loading="lazy" />
+        <img src="/images/jmb_post5_03.jpg" alt="Basement remodel project" loading="lazy" />
+        <img src="/images/jmb_post5_04.jpg" alt="Basement remodel project" loading="lazy" />
+        <img src="/images/jmb_post6_01.jpg" alt="Finished basement project" loading="lazy" />
+        <img src="/images/jmb_post6_02.jpg" alt="Finished basement project" loading="lazy" />
+        <img src="/images/jmb_post6_03.jpg" alt="Finished basement project" loading="lazy" />
+        <img src="/images/jmb_post6_04.jpg" alt="Finished basement project" loading="lazy" />
+        <img src="/images/jmb_post6_05.jpg" alt="Finished basement project" loading="lazy" />
+        <img src="/images/jmb_post6_06.jpg" alt="Finished basement project" loading="lazy" />
+        <img src="/images/jmb_post6_07.jpg" alt="Finished basement project" loading="lazy" />
+        <img src="/images/jmb_post6_08.jpg" alt="Finished basement project" loading="lazy" />
+        <img src="/images/jmb_post6_09.jpg" alt="Finished basement project" loading="lazy" />
+        <img src="/images/jmb_post6_10.jpg" alt="Finished basement project" loading="lazy" />
+        <img src="/images/jmb_post6_11.jpg" alt="Finished basement project" loading="lazy" />
+        <img src="/images/jmb_post6_12.jpg" alt="Finished basement project" loading="lazy" />
+        <img src="/images/jmb_post6_13.jpg" alt="Finished basement project" loading="lazy" />
+        <img src="/images/jmb_post6_14.jpg" alt="Finished basement project" loading="lazy" />
+        <img src="/images/jmb_post6_15.jpg" alt="Finished basement project" loading="lazy" />
+        <img src="/images/jmb_post6_16.jpg" alt="Finished basement project" loading="lazy" />
+        <img src="/images/jmb_post6_17.jpg" alt="Finished basement project" loading="lazy" />
+        <img src="/images/jmb_post6_18.jpg" alt="Finished basement project" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="container about-grid">
+      <div class="about-text">
+        <span class="eyebrow">About JMB Basements</span>
+        <h2>Local craftsmanship you can trust.</h2>
+        <p>JMB Basements is a family-run finishing crew based in Auburn Hills, Michigan. We focus exclusively on basements, which means every project gets the planning, materials, and attention to detail it deserves.</p>
+        <p>From a single-room rec area to a full lower-level buildout with a bathroom and wet bar, we handle the whole job &mdash; demo, framing, electrical coordination, drywall, flooring, trim, and paint.</p>
+        <a href="/contact.html" class="btn btn-primary">Start your project</a>
+      </div>
+      <div class="about-card">
+        <h3>Get in touch</h3>
+        <p class="contact-line"><strong>Address</strong><br>681 Province Town Rd<br>Auburn Hills, MI 48326</p>
+        <p class="contact-line"><strong>Phone</strong><br><a href="tel:+19474791247">(947) 479-1247</a></p>
+        <p class="contact-line"><strong>Email</strong><br><a href="mailto:jesusmachen@gmail.com">jesusmachen@gmail.com</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-logo">JMB Basements</div>
+        <p>Professional basement finishing &amp; remodeling in Metro Detroit.</p>
+      </div>
+      <div>
+        <h4>Quick links</h4>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#about">About</a>
+        <a href="/contact.html">Contact</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="tel:+19474791247">(947) 479-1247</a>
+        <a href="mailto:jesusmachen@gmail.com">jesusmachen@gmail.com</a>
+        <span>681 Province Town Rd<br>Auburn Hills, MI 48326</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> JMB Basements. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
 </body>
 </html>
