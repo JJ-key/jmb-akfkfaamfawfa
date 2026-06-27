@@ -136,139 +136,178 @@
       <div class="section-header">
         <span class="eyebrow">Recent work</span>
         <h2>Projects, by location.</h2>
-        <p>A look at finished basements across Auburn Hills, New Hudson, Canton, and the surrounding areas.</p>
+        <p>Click any project to see all the photos. Finished basements across Auburn Hills, New Hudson, Canton, and surrounding areas.</p>
       </div>
 
-      <!--
-        PROJECT 1 — New Hudson, MI (confirmed)
-        To update title/address, edit the h3 and .project-meta below.
-      -->
-      <article class="project">
-        <header class="project-header">
-          <div>
-            <span class="project-index">01</span>
-            <h3>New Hudson, MI</h3>
-            <p class="project-meta">Finished basement &middot; March 2026</p>
-          </div>
-          <span class="project-count">8 photos</span>
-        </header>
-        <div class="project-grid">
-          <img src="/images/jmb_post1_01.jpg" alt="Finished basement in New Hudson, MI" loading="lazy" />
-          <img src="/images/jmb_post1_02.jpg" alt="Finished basement in New Hudson, MI" loading="lazy" />
-          <img src="/images/jmb_post1_03.jpg" alt="Finished basement in New Hudson, MI" loading="lazy" />
-          <img src="/images/jmb_post1_04.jpg" alt="Finished basement in New Hudson, MI" loading="lazy" />
-          <img src="/images/jmb_post1_05.jpg" alt="Finished basement in New Hudson, MI" loading="lazy" />
-          <img src="/images/jmb_post1_06.jpg" alt="Finished basement in New Hudson, MI" loading="lazy" />
-          <img src="/images/jmb_post1_07.jpg" alt="Finished basement in New Hudson, MI" loading="lazy" />
-          <img src="/images/jmb_post1_08.jpg" alt="Finished basement in New Hudson, MI" loading="lazy" />
-        </div>
-      </article>
+      <div class="projects-grid">
 
-      <!--
-        PROJECT 2 — Address TBD
-        Replace "Recent Project" and the date below with the address when known.
-      -->
-      <article class="project">
-        <header class="project-header">
-          <div>
-            <span class="project-index">02</span>
-            <h3>Recent Project</h3>
-            <p class="project-meta">December 2025 &middot; <em>Address pending</em></p>
+        <!-- PROJECT 1 — New Hudson, MI (confirmed) -->
+        <article class="project-card">
+          <button class="project-toggle" type="button" aria-expanded="false" aria-controls="project-1-photos">
+            <div class="project-cover">
+              <img src="/images/jmb_post1_01.jpg" alt="Cover photo for New Hudson project" loading="lazy" />
+            </div>
+            <div class="project-meta-bar">
+              <div>
+                <span class="project-index">01</span>
+                <h3>New Hudson, MI</h3>
+                <p class="project-sub">Finished basement &middot; March 2026 &middot; 8 photos</p>
+              </div>
+              <span class="project-chevron" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </div>
+          </button>
+          <div class="project-photos" id="project-1-photos" hidden>
+            <img src="/images/jmb_post1_01.jpg" alt="Finished basement in New Hudson, MI" loading="lazy" />
+            <img src="/images/jmb_post1_02.jpg" alt="Finished basement in New Hudson, MI" loading="lazy" />
+            <img src="/images/jmb_post1_03.jpg" alt="Finished basement in New Hudson, MI" loading="lazy" />
+            <img src="/images/jmb_post1_04.jpg" alt="Finished basement in New Hudson, MI" loading="lazy" />
+            <img src="/images/jmb_post1_05.jpg" alt="Finished basement in New Hudson, MI" loading="lazy" />
+            <img src="/images/jmb_post1_06.jpg" alt="Finished basement in New Hudson, MI" loading="lazy" />
+            <img src="/images/jmb_post1_07.jpg" alt="Finished basement in New Hudson, MI" loading="lazy" />
+            <img src="/images/jmb_post1_08.jpg" alt="Finished basement in New Hudson, MI" loading="lazy" />
           </div>
-          <span class="project-count">2 photos</span>
-        </header>
-        <div class="project-grid">
-          <img src="/images/jmb_post2_01.jpg" alt="Basement remodel" loading="lazy" />
-          <img src="/images/jmb_post2_02.jpg" alt="Basement remodel" loading="lazy" />
-        </div>
-      </article>
+        </article>
 
-      <!-- PROJECT 3 — Address TBD -->
-      <article class="project">
-        <header class="project-header">
-          <div>
-            <span class="project-index">03</span>
-            <h3>Recent Project</h3>
-            <p class="project-meta">July 2025 &middot; <em>Address pending</em></p>
+        <!-- PROJECT 2 — Address TBD -->
+        <article class="project-card">
+          <button class="project-toggle" type="button" aria-expanded="false" aria-controls="project-2-photos">
+            <div class="project-cover">
+              <img src="/images/jmb_post2_01.jpg" alt="" loading="lazy" />
+            </div>
+            <div class="project-meta-bar">
+              <div>
+                <span class="project-index">02</span>
+                <h3>Recent Project</h3>
+                <p class="project-sub">December 2025 &middot; 2 photos &middot; <em>Address pending</em></p>
+              </div>
+              <span class="project-chevron" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </div>
+          </button>
+          <div class="project-photos" id="project-2-photos" hidden>
+            <img src="/images/jmb_post2_01.jpg" alt="Basement remodel" loading="lazy" />
+            <img src="/images/jmb_post2_02.jpg" alt="Basement remodel" loading="lazy" />
           </div>
-          <span class="project-count">6 photos</span>
-        </header>
-        <div class="project-grid">
-          <img src="/images/jmb_post3_01.jpg" alt="Basement remodel" loading="lazy" />
-          <img src="/images/jmb_post3_02.jpg" alt="Basement remodel" loading="lazy" />
-          <img src="/images/jmb_post3_03.jpg" alt="Basement remodel" loading="lazy" />
-          <img src="/images/jmb_post3_04.jpg" alt="Basement remodel" loading="lazy" />
-          <img src="/images/jmb_post3_05.jpg" alt="Basement remodel" loading="lazy" />
-          <img src="/images/jmb_post3_06.jpg" alt="Basement remodel" loading="lazy" />
-        </div>
-      </article>
+        </article>
 
-      <!-- PROJECT 4 — Address TBD -->
-      <article class="project">
-        <header class="project-header">
-          <div>
-            <span class="project-index">04</span>
-            <h3>Recent Project</h3>
-            <p class="project-meta">May 2025 &middot; <em>Address pending</em></p>
+        <!-- PROJECT 3 — Address TBD -->
+        <article class="project-card">
+          <button class="project-toggle" type="button" aria-expanded="false" aria-controls="project-3-photos">
+            <div class="project-cover">
+              <img src="/images/jmb_post3_01.jpg" alt="" loading="lazy" />
+            </div>
+            <div class="project-meta-bar">
+              <div>
+                <span class="project-index">03</span>
+                <h3>Recent Project</h3>
+                <p class="project-sub">July 2025 &middot; 6 photos &middot; <em>Address pending</em></p>
+              </div>
+              <span class="project-chevron" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </div>
+          </button>
+          <div class="project-photos" id="project-3-photos" hidden>
+            <img src="/images/jmb_post3_01.jpg" alt="Basement remodel" loading="lazy" />
+            <img src="/images/jmb_post3_02.jpg" alt="Basement remodel" loading="lazy" />
+            <img src="/images/jmb_post3_03.jpg" alt="Basement remodel" loading="lazy" />
+            <img src="/images/jmb_post3_04.jpg" alt="Basement remodel" loading="lazy" />
+            <img src="/images/jmb_post3_05.jpg" alt="Basement remodel" loading="lazy" />
+            <img src="/images/jmb_post3_06.jpg" alt="Basement remodel" loading="lazy" />
           </div>
-          <span class="project-count">2 photos</span>
-        </header>
-        <div class="project-grid">
-          <img src="/images/jmb_post4_01.jpg" alt="Basement remodel" loading="lazy" />
-          <img src="/images/jmb_post4_02.jpg" alt="Basement remodel" loading="lazy" />
-        </div>
-      </article>
+        </article>
 
-      <!-- PROJECT 5 — Address TBD -->
-      <article class="project">
-        <header class="project-header">
-          <div>
-            <span class="project-index">05</span>
-            <h3>Recent Project</h3>
-            <p class="project-meta">March 2025 &middot; <em>Address pending</em></p>
+        <!-- PROJECT 4 — Address TBD -->
+        <article class="project-card">
+          <button class="project-toggle" type="button" aria-expanded="false" aria-controls="project-4-photos">
+            <div class="project-cover">
+              <img src="/images/jmb_post4_01.jpg" alt="" loading="lazy" />
+            </div>
+            <div class="project-meta-bar">
+              <div>
+                <span class="project-index">04</span>
+                <h3>Recent Project</h3>
+                <p class="project-sub">May 2025 &middot; 2 photos &middot; <em>Address pending</em></p>
+              </div>
+              <span class="project-chevron" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </div>
+          </button>
+          <div class="project-photos" id="project-4-photos" hidden>
+            <img src="/images/jmb_post4_01.jpg" alt="Basement remodel" loading="lazy" />
+            <img src="/images/jmb_post4_02.jpg" alt="Basement remodel" loading="lazy" />
           </div>
-          <span class="project-count">4 photos</span>
-        </header>
-        <div class="project-grid">
-          <img src="/images/jmb_post5_01.jpg" alt="Basement remodel" loading="lazy" />
-          <img src="/images/jmb_post5_02.jpg" alt="Basement remodel" loading="lazy" />
-          <img src="/images/jmb_post5_03.jpg" alt="Basement remodel" loading="lazy" />
-          <img src="/images/jmb_post5_04.jpg" alt="Basement remodel" loading="lazy" />
-        </div>
-      </article>
+        </article>
 
-      <!-- PROJECT 6 — Canton, MI (confirmed) -->
-      <article class="project">
-        <header class="project-header">
-          <div>
-            <span class="project-index">06</span>
-            <h3>Canton, MI</h3>
-            <p class="project-meta">Full basement buildout &middot; 2025</p>
+        <!-- PROJECT 5 — Address TBD -->
+        <article class="project-card">
+          <button class="project-toggle" type="button" aria-expanded="false" aria-controls="project-5-photos">
+            <div class="project-cover">
+              <img src="/images/jmb_post5_01.jpg" alt="" loading="lazy" />
+            </div>
+            <div class="project-meta-bar">
+              <div>
+                <span class="project-index">05</span>
+                <h3>Recent Project</h3>
+                <p class="project-sub">March 2025 &middot; 4 photos &middot; <em>Address pending</em></p>
+              </div>
+              <span class="project-chevron" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </div>
+          </button>
+          <div class="project-photos" id="project-5-photos" hidden>
+            <img src="/images/jmb_post5_01.jpg" alt="Basement remodel" loading="lazy" />
+            <img src="/images/jmb_post5_02.jpg" alt="Basement remodel" loading="lazy" />
+            <img src="/images/jmb_post5_03.jpg" alt="Basement remodel" loading="lazy" />
+            <img src="/images/jmb_post5_04.jpg" alt="Basement remodel" loading="lazy" />
           </div>
-          <span class="project-count">18 photos</span>
-        </header>
-        <div class="project-grid">
-          <img src="/images/jmb_post6_01.jpg" alt="Finished basement in Canton, MI" loading="lazy" />
-          <img src="/images/jmb_post6_02.jpg" alt="Finished basement in Canton, MI" loading="lazy" />
-          <img src="/images/jmb_post6_03.jpg" alt="Finished basement in Canton, MI" loading="lazy" />
-          <img src="/images/jmb_post6_04.jpg" alt="Finished basement in Canton, MI" loading="lazy" />
-          <img src="/images/jmb_post6_05.jpg" alt="Finished basement in Canton, MI" loading="lazy" />
-          <img src="/images/jmb_post6_06.jpg" alt="Finished basement in Canton, MI" loading="lazy" />
-          <img src="/images/jmb_post6_07.jpg" alt="Finished basement in Canton, MI" loading="lazy" />
-          <img src="/images/jmb_post6_08.jpg" alt="Finished basement in Canton, MI" loading="lazy" />
-          <img src="/images/jmb_post6_09.jpg" alt="Finished basement in Canton, MI" loading="lazy" />
-          <img src="/images/jmb_post6_10.jpg" alt="Finished basement in Canton, MI" loading="lazy" />
-          <img src="/images/jmb_post6_11.jpg" alt="Finished basement in Canton, MI" loading="lazy" />
-          <img src="/images/jmb_post6_12.jpg" alt="Finished basement in Canton, MI" loading="lazy" />
-          <img src="/images/jmb_post6_13.jpg" alt="Finished basement in Canton, MI" loading="lazy" />
-          <img src="/images/jmb_post6_14.jpg" alt="Finished basement in Canton, MI" loading="lazy" />
-          <img src="/images/jmb_post6_15.jpg" alt="Finished basement in Canton, MI" loading="lazy" />
-          <img src="/images/jmb_post6_16.jpg" alt="Finished basement in Canton, MI" loading="lazy" />
-          <img src="/images/jmb_post6_17.jpg" alt="Finished basement in Canton, MI" loading="lazy" />
-          <img src="/images/jmb_post6_18.jpg" alt="Finished basement in Canton, MI" loading="lazy" />
-        </div>
-      </article>
+        </article>
 
+        <!-- PROJECT 6 — Canton, MI (confirmed) -->
+        <article class="project-card">
+          <button class="project-toggle" type="button" aria-expanded="false" aria-controls="project-6-photos">
+            <div class="project-cover">
+              <img src="/images/jmb_post6_01.jpg" alt="Cover photo for Canton project" loading="lazy" />
+            </div>
+            <div class="project-meta-bar">
+              <div>
+                <span class="project-index">06</span>
+                <h3>Canton, MI</h3>
+                <p class="project-sub">Full basement buildout &middot; 2025 &middot; 18 photos</p>
+              </div>
+              <span class="project-chevron" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </div>
+          </button>
+          <div class="project-photos" id="project-6-photos" hidden>
+            <img src="/images/jmb_post6_01.jpg" alt="Finished basement in Canton, MI" loading="lazy" />
+            <img src="/images/jmb_post6_02.jpg" alt="Finished basement in Canton, MI" loading="lazy" />
+            <img src="/images/jmb_post6_03.jpg" alt="Finished basement in Canton, MI" loading="lazy" />
+            <img src="/images/jmb_post6_04.jpg" alt="Finished basement in Canton, MI" loading="lazy" />
+            <img src="/images/jmb_post6_05.jpg" alt="Finished basement in Canton, MI" loading="lazy" />
+            <img src="/images/jmb_post6_06.jpg" alt="Finished basement in Canton, MI" loading="lazy" />
+            <img src="/images/jmb_post6_07.jpg" alt="Finished basement in Canton, MI" loading="lazy" />
+            <img src="/images/jmb_post6_08.jpg" alt="Finished basement in Canton, MI" loading="lazy" />
+            <img src="/images/jmb_post6_09.jpg" alt="Finished basement in Canton, MI" loading="lazy" />
+            <img src="/images/jmb_post6_10.jpg" alt="Finished basement in Canton, MI" loading="lazy" />
+            <img src="/images/jmb_post6_11.jpg" alt="Finished basement in Canton, MI" loading="lazy" />
+            <img src="/images/jmb_post6_12.jpg" alt="Finished basement in Canton, MI" loading="lazy" />
+            <img src="/images/jmb_post6_13.jpg" alt="Finished basement in Canton, MI" loading="lazy" />
+            <img src="/images/jmb_post6_14.jpg" alt="Finished basement in Canton, MI" loading="lazy" />
+            <img src="/images/jmb_post6_15.jpg" alt="Finished basement in Canton, MI" loading="lazy" />
+            <img src="/images/jmb_post6_16.jpg" alt="Finished basement in Canton, MI" loading="lazy" />
+            <img src="/images/jmb_post6_17.jpg" alt="Finished basement in Canton, MI" loading="lazy" />
+            <img src="/images/jmb_post6_18.jpg" alt="Finished basement in Canton, MI" loading="lazy" />
+          </div>
+        </article>
+
+      </div>
     </div>
   </section>
 

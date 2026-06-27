@@ -10,7 +10,20 @@ if (navToggle && navLinks) {
   );
 }
 
-const fadeTargets = document.querySelectorAll('.gallery-grid img, .service-card');
+document.querySelectorAll('.project-card .project-toggle').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const card = btn.closest('.project-card');
+    const panel = card.querySelector('.project-photos');
+    const isOpen = card.classList.toggle('is-open');
+    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    panel.hidden = !isOpen;
+    if (isOpen) {
+      card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
+const fadeTargets = document.querySelectorAll('.service-card');
 if (fadeTargets.length && 'IntersectionObserver' in window) {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
