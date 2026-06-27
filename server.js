@@ -16,13 +16,15 @@ app.use(helmet({
     directives: {
       defaultSrc: ["'self'"],
       scriptSrc: ["'self'", "https://www.google.com", "https://www.gstatic.com"],
-      frameSrc: ["'self'", "https://www.google.com"],
+      frameSrc: ["'self'", "https://www.google.com", "https://www.google.com/maps/"],
       styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
       fontSrc: ["'self'", "https://fonts.gstatic.com"],
-      imgSrc: ["'self'", "data:"],
+      imgSrc: ["'self'", "data:", "blob:", "https:"],
       connectSrc: ["'self'"],
     },
   },
+  crossOriginEmbedderPolicy: false,
+  crossOriginResourcePolicy: { policy: "cross-origin" },
 }));
 
 app.use(express.urlencoded({ extended: true, limit: '10kb' }));
