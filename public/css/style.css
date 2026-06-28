@@ -154,8 +154,8 @@ a { color: inherit; text-decoration: none; }
 /* ---------- Hero ---------- */
 .hero {
   position: relative;
-  height: 80vh;
-  max-height: 700px;
+  height: 90vh;
+  max-height: 820px;
   overflow: hidden;
   text-align: center;
 }
