@@ -64,7 +64,7 @@
       });
       const data = await res.json();
 
-      if (res.ok && data.success) {
+      if (res.ok && data.ok) {
         showStatus('Thanks! Your message has been sent. We\'ll be in touch shortly.', 'success');
         form.reset();
         if (window.grecaptcha && recaptchaWidgetId !== null) {
