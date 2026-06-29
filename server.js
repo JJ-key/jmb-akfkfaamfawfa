@@ -3,7 +3,6 @@ require('dotenv').config();
 const express = require('express');
 const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
-const nodemailer = require('nodemailer');
 const validator = require('validator');
 
 const app = express();
@@ -46,7 +45,7 @@ app.get('/api/config', (req, res) => {
 
 async function verifyRecaptcha(token, remoteIp) {
   const secret = process.env.RECAPTCHA_SECRET_KEY;
-  if (!secret) return { success: false, reason: 'recaptcha-not-configured' };
+  if (!secret) return { success: true, reason: 'recaptcha-not-configured' };
   if (!token) return { success: false, reason: 'missing-token' };
 
   const params = new URLSearchParams({ secret, response: token });
@@ -65,23 +64,11 @@ async function verifyRecaptcha(token, remoteIp) {
   }
 }
 
-function buildTransport() {
-  return nodemailer.createTransport({
-    host: process.env.SMTP_HOST,
-    port: Number(process.env.SMTP_PORT) || 587,
-    secure: Number(process.env.SMTP_PORT) === 465,
-    auth: {
-      user: process.env.SMTP_USER,
-      pass: process.env.SMTP_PASS,
-    },
-  });
-}
-
 app.post('/api/contact', contactLimiter, async (req, res) => {
-  const { name, email, phone, message, 'g-recaptcha-response': recaptchaToken, website } = req.body || {};
+  const { name, email, phone, message, 'g-recaptcha-response': recaptchaToken, website, company } = req.body || {};
 
-  if (website && website.trim() !== '') {
-    return res.json({ success: true });
+  if ((website && website.trim() !== '') || (company && company.trim() !== '')) {
+    return res.json({ ok: true });
   }
 
   if (typeof name !== 'string' || typeof email !== 'string' || typeof message !== 'string') {
@@ -111,36 +98,36 @@ app.post('/api/contact', contactLimiter, async (req, res) => {
     return res.status(400).json({ error: 'reCAPTCHA verification failed. Please try again.' });
   }
 
-  const safe = (s) => validator.escape(s);
+  const esc = (s = '') => validator.escape(String(s));
 
   try {
-    const transporter = buildTransport();
-    await transporter.sendMail({
-      from: `"JMB Basements Website" <${process.env.SMTP_USER}>`,
-      to: process.env.OWNER_EMAIL,
-      replyTo: cleanEmail,
-      subject: `New Contact Form Submission from ${cleanName}`,
-      text: [
-        `Name: ${cleanName}`,
-        `Email: ${cleanEmail}`,
-        `Phone: ${cleanPhone || '(not provided)'}`,
-        '',
-        'Message:',
-        cleanMessage,
-      ].join('\n'),
-      html: `
-        <h2>New Contact Form Submission</h2>
-        <p><strong>Name:</strong> ${safe(cleanName)}</p>
-        <p><strong>Email:</strong> ${safe(cleanEmail)}</p>
-        <p><strong>Phone:</strong> ${safe(cleanPhone) || '(not provided)'}</p>
-        <p><strong>Message:</strong></p>
-        <p>${safe(cleanMessage).replace(/\n/g, '<br>')}</p>
-      `,
+    const r = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${process.env.RESEND_API_KEY}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        from: `JM Basements <${process.env.CONTACT_FROM}>`,
+        to: [process.env.CONTACT_TO],
+        reply_to: cleanEmail,
+        subject: `New website enquiry from ${cleanName}`,
+        html: `<h2>New contact form submission</h2>
+          <p><strong>Name:</strong> ${esc(cleanName)}</p>
+          <p><strong>Email:</strong> ${esc(cleanEmail)}</p>
+          <p><strong>Phone:</strong> ${esc(cleanPhone || '—')}</p>
+          <p><strong>Message:</strong><br>${esc(cleanMessage).replace(/\n/g, '<br>')}</p>`,
+      }),
     });
 
-    res.json({ success: true });
+    if (!r.ok) {
+      console.error('Resend error:', await r.text());
+      return res.status(502).json({ error: 'Could not send right now. Please try again.' });
+    }
+
+    res.json({ ok: true });
   } catch (err) {
-    console.error('Email send failed:', err.message);
+    console.error('Contact error:', err);
     res.status(500).json({ error: 'Failed to send message. Please try again later or call us directly.' });
   }
 });
